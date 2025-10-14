@@ -30,7 +30,7 @@ async function checkin() {
     };
 
     // 发送 POST 请求进行签到
-    const response = await axios.get(CONFIG.checkinUrl, {}, { headers });
+    const response = await axios.get(CONFIG.checkinUrl, { headers });
 
     if (response.status === 200) {
       logMessage('✅ 签到成功');
