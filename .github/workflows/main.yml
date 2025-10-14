@@ -1,0 +1,29 @@
+name: Auto Checkin with JS
+
+on:
+  schedule:
+    # 每天 UTC 时间 0 点运行 (北京时间早上 10 点)
+    - cron: '0 10 * * *'
+  workflow_dispatch:  # 允许手动触发
+  push:
+    branches: [ main ]
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install axios
+
+    - name: Run checkin script
+      run: node checkin.js
