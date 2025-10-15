@@ -42,7 +42,7 @@ async function checkin() {
     if (error.response) {
       // 服务器响应了错误状态码
       console.error('状态码:', error.response.status);
-      console.error('响应数据:', JSON.stringify(error.response.data, null, 2));
+      console.error('响应数据:', CONFIG);
     } else if (error.request) {
       // 请求发送但没有收到响应
       console.error('网络错误:', error.message);
