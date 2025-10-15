@@ -1,8 +1,5 @@
 const axios = require('axios');
 
-// token
-const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.22k--z3TwKpeIaXuWrQJRmP93Tn0CAcSqb7bZ4NbeQU';
-
 // 签到配置
 const CHECKIN_URL = 'https://api-ic.yonyouauto.com/api/applet/hrempintegralsigninlist/querySignInNowPeriodSignIn?time=' + parseInt(new Date().getTime() / 1000) // 签到 URL
 const CONFIG = {
@@ -10,7 +7,7 @@ const CONFIG = {
   url: CHECKIN_URL,
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF WindowsWechat(0x63090c11)XWEB/11581',
-    'Authorization': TOKEN,
+    'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e30.22k--z3TwKpeIaXuWrQJRmP93Tn0CAcSqb7bZ4NbeQU',
     xweb_xhr: 1,
     "Sec-Fetch-Site": "cross-site",
     "Sec-Fetch-Mode": 'cors',
