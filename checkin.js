@@ -34,8 +34,7 @@ async function checkin() {
     
     console.log('签到成功!');
     console.log('状态码:', response.status);
-    console.log('响应数据:', JSON.stringify(response.data, null, 2));
-    console.log('CONFIG->', CONFIG);
+    console.log('响应数据:', JSON.stringify(response.data, null, 2), 'CONFIG->', CONFIG);
     return { success: true, data: response.data };
   } catch (error) {
     console.error('签到失败:');
